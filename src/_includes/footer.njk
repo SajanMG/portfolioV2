@@ -1,0 +1,22 @@
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2024 {{ site.author or 'Your Name' }}. All rights reserved.</p>
+        <div class="social-links">
+            {% if site.social.github %}
+            <a href="{{ site.social.github }}" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if site.social.linkedin %}
+            <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            {% endif %}
+            {% if site.social.twitter %}
+            <a href="{{ site.social.twitter }}" target="_blank" rel="noopener">
+                <i class="fab fa-twitter"></i>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</footer>

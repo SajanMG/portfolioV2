@@ -1,0 +1,157 @@
+---
+layout: base
+title: Home
+description: Welcome to my portfolio - Developer, Designer, and Tech Enthusiast
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="highlight">{{ site.author or 'Your Name' }}</span></h1>
+            <p class="hero-subtitle">Full-Stack Developer & Tech Enthusiast</p>
+            <p class="hero-description">
+                I build modern web applications and share my knowledge through writing. 
+                Passionate about clean code, user experience, and continuous learning.
+            </p>
+            <div class="hero-actions">
+                <a href="/#about" class="btn btn-primary">Learn More</a>
+                <a href="/blog" class="btn btn-secondary">Read Blog</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-placeholder">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a passionate developer with expertise in modern web technologies. 
+                    I love building applications that solve real-world problems and provide 
+                    exceptional user experiences.
+                </p>
+                <p>
+                    When I'm not coding, you can find me writing technical blog posts, 
+                    contributing to open source projects, or exploring new technologies.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Blog Posts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills">
+    <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-tags">
+                    {% for skill in site.skills.frontend %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-tags">
+                    {% for skill in site.skills.backend %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Others</h3>
+                <div class="skill-tags">
+                    {% for skill in site.skills.tools %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Blog Posts -->
+<section class="recent-posts">
+    <div class="container">
+        <h2 class="section-title">Latest Blog Posts</h2>
+        <div class="posts-grid">
+            {% for post in collections.post | head(3) %}
+            <article class="post-card">
+                <div class="post-card-content">
+                    <h3 class="post-card-title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h3>
+                    <p class="post-card-excerpt">{{ post.data.description or post.data.excerpt or post.templateContent | excerpt }}</p>
+                    <div class="post-card-meta">
+                        <time datetime="{{ post.date | dateISO }}">{{ post.date | date }}</time>
+                        {% if post.data.tags %}
+                        <div class="post-card-tags">
+                            {% for tag in post.data.tags | head(2) %}
+                            <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="posts-cta">
+            <a href="/blog" class="btn btn-primary">View All Posts</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="contact-methods">
+                    <a href="mailto:{{ site.email or 'your.email@example.com' }}" class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>{{ site.email or 'your.email@example.com' }}</span>
+                    </a>
+                    {% if site.social.github %}
+                    <a href="{{ site.social.github }}" target="_blank" rel="noopener" class="contact-method">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/{{ site.github or 'yourusername' }}</span>
+                    </a>
+                    {% endif %}
+                    {% if site.social.linkedin %}
+                    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" class="contact-method">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/{{ site.linkedin or 'yourusername' }}</span>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+{% if href %}
+<a href="{{ href }}" class="btn btn-{{ type or 'primary' }}{% if classes %} {{ classes }}{% endif %}"{% if target %} target="{{ target }}"{% endif %}{% if rel %} rel="{{ rel }}"{% endif %}>
+    {{ text }}
+</a>
+{% else %}
+<button type="{{ buttonType or 'button' }}" class="btn btn-{{ type or 'primary' }}{% if classes %} {{ classes }}{% endif %}">
+    {{ text }}
+</button>
+{% endif %}

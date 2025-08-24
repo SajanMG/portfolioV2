@@ -1,0 +1,45 @@
+---
+layout: base
+---
+
+<article class="blog-post">
+    <header class="post-header">
+        <div class="container">
+            <h1 class="post-title">{{ title }}</h1>
+            {% if date %}
+            <time class="post-date" datetime="{{ date | dateISO }}">{{ date | date }}</time>
+            {% endif %}
+            {% if tags %}
+            <div class="post-tags">
+                {% for tag in tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="post-content container">
+        {{ content | safe }}
+    </div>
+    
+    <footer class="post-footer">
+        <div class="container">
+            <div class="post-navigation">
+                {% if prevPost %}
+                <a href="{{ prevPost.url }}" class="prev-post">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>{{ prevPost.data.title }}</span>
+                </a>
+                {% endif %}
+                
+                {% if nextPost %}
+                <a href="{{ nextPost.url }}" class="next-post">
+                    <span>{{ nextPost.data.title }}</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+</article>

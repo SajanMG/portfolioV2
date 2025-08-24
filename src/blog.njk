@@ -1,0 +1,61 @@
+---
+layout: base
+title: Blog
+description: Read my latest thoughts on technology, development, and more
+---
+
+<section class="blog-header">
+    <div class="container">
+        <h1 class="page-title">Blog</h1>
+        <p class="page-description">
+            Thoughts, tutorials, and insights about web development, technology, and my journey as a developer.
+        </p>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        <div class="blog-filters">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search posts..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="tag-filters" id="tag-filters">
+                <!-- Tags will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="posts-grid" id="posts-grid">
+            {% for post in collections.post %}
+            <article class="post-card"{% if post.data.tags %} data-tags="{{ post.data.tags | join(' ') | lower }}"{% endif %}>
+                <div class="post-card-content">
+                    <h2 class="post-card-title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    <p class="post-card-excerpt">
+                        {{ post.data.description or post.data.excerpt or post.templateContent | excerpt }}
+                    </p>
+                    <div class="post-card-meta">
+                        <time datetime="{{ post.date | dateISO }}" class="post-date">
+                            {{ post.date | date }}
+                        </time>
+                        {% if post.data.tags %}
+                        <div class="post-card-tags">
+                            {% for tag in post.data.tags %}
+                            <span class="tag" data-tag="{{ tag | lower }}">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if collections.post.length == 0 %}
+        <div class="no-posts">
+            <p>No blog posts found. Check back soon!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>

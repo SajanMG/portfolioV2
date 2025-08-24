@@ -1,0 +1,20 @@
+<article class="post-card"{% if tags %} data-tags="{{ tags | join(' ') | lower }}"{% endif %}>
+    <div class="post-card-content">
+        <h3 class="post-card-title">
+            <a href="{{ url }}">{{ title }}</a>
+        </h3>
+        <p class="post-card-excerpt">{{ excerpt or description }}</p>
+        <div class="post-card-meta">
+            {% if date %}
+            <time datetime="{{ date | dateISO }}" class="post-date">{{ date | date }}</time>
+            {% endif %}
+            {% if tags %}
+            <div class="post-card-tags">
+                {% for tag in tags | head(2) %}
+                <span class="tag" data-tag="{{ tag | lower }}">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</article>
