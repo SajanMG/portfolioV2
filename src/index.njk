@@ -141,13 +141,13 @@ description: Welcome to my portfolio - Developer, Designer, and Tech Enthusiast
                     {% if site.social.github %}
                     <a href="{{ site.social.github }}" target="_blank" rel="noopener" class="contact-method">
                         <i class="fab fa-github"></i>
-                        <span>github.com/{{ site.github or 'yourusername' }}</span>
+                        <span>{{ site.github or 'yourusername' }}</span>
                     </a>
                     {% endif %}
                     {% if site.social.linkedin %}
                     <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" class="contact-method">
                         <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/{{ site.linkedin or 'yourusername' }}</span>
+                        <span>{{ site.linkedin or 'yourusername' }}</span>
                     </a>
                     {% endif %}
                 </div>
