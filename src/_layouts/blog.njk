@@ -19,6 +19,14 @@ layout: base
         </div>
     </header>
     
+    {% if featureImage %}
+    <section class="post-feature-image">
+        <div class="container">
+            <img src="{{ featureImage }}" alt="{{ featureImageAlt or title }}" class="feature-image">
+        </div>
+    </section>
+    {% endif %}
+    
     <div class="post-content container">
         {{ content | safe }}
     </div>

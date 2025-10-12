@@ -97,10 +97,92 @@ description: Welcome to my portfolio - Developer, Designer, and Tech Enthusiast
     </div>
 </section>
 
-<!-- Side Projects -->
-<section class="about">
+<!-- Other Contributions -->
+<section class="contributions">
     <div class="container">
         <h2 class="section-title">Other Contributions</h2>
+        <p class="section-description">Here are some of my contributions to open source projects and developer community.</p>
+        
+        <div class="contributions-grid">
+            {% for contribution in contributions %}
+            <div class="contribution-card">
+                <div class="contribution-content">
+                    <h3 class="contribution-title">
+                        {% if contribution.websiteUrl %}
+                        <a href="{{ contribution.websiteUrl }}" target="_blank" rel="noopener">{{ contribution.title }}</a>
+                        {% else %}
+                        {{ contribution.title }}
+                        {% endif %}
+                    </h3>
+                    <p class="contribution-description">{{ contribution.description }}</p>
+                    <div class="contribution-details">
+                        <div class="contribution-role">
+                            <strong>Role:</strong> {{ contribution.role }}
+                        </div>
+                        <div class="contribution-technologies">
+                            <strong>Tech Stack:</strong>
+                            <div class="tech-tags">
+                                {% for tech in contribution.technologies %}
+                                <span class="tech-tag">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% if contribution.websiteUrl %}
+                        <div class="contribution-link">
+                            <a href="{{ contribution.websiteUrl }}" target="_blank" rel="noopener" class="website-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visit Website</span>
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Other Projects -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">Other Projects</h2>
+        <p class="section-description">Here are some of my side projects and personal work.</p>
+        
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            {% if project.liveUrl %}
+                            <a href="{{ project.liveUrl }}" target="_blank" rel="noopener" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            {% endif %}
+                            {% if project.githubUrl %}
+                            <a href="{{ project.githubUrl }}" target="_blank" rel="noopener" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="project-technologies">
+                        {% for tech in project.technologies %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section> 
 
@@ -110,24 +192,26 @@ description: Welcome to my portfolio - Developer, Designer, and Tech Enthusiast
         <h2 class="section-title">Latest Blog Posts</h2>
         <div class="posts-grid">
             {% for post in collections.post | head(3) %}
-            <article class="post-card">
-                <div class="post-card-content">
-                    <h3 class="post-card-title">
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
-                    </h3>
-                    <p class="post-card-excerpt">{{ post.data.description or post.data.excerpt or post.templateContent | excerpt }}</p>
-                    <div class="post-card-meta">
-                        <time datetime="{{ post.date | dateISO }}">{{ post.date | date }}</time>
-                        {% if post.data.tags %}
-                        <div class="post-card-tags">
-                            {% for tag in post.data.tags | head(2) %}
-                            <span class="tag">{{ tag }}</span>
-                            {% endfor %}
+            <a href="{{ post.url }}" class="post-card-link">
+                <article class="post-card">
+                    <div class="post-card-content">
+                        <h3 class="post-card-title">
+                            {{ post.data.title }}
+                        </h3>
+                        <p class="post-card-excerpt">{{ post.data.description or post.data.excerpt or post.templateContent | excerpt }}</p>
+                        <div class="post-card-meta">
+                            <time datetime="{{ post.date | dateISO }}">{{ post.date | date }}</time>
+                            {% if post.data.tags %}
+                            <div class="post-card-tags">
+                                {% for tag in post.data.tags | head(2) %}
+                                <span class="tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
                         </div>
-                        {% endif %}
                     </div>
-                </div>
-            </article>
+                </article>
+            </a>
             {% endfor %}
         </div>
         <div class="posts-cta">

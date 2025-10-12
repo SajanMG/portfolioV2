@@ -1,0 +1,14 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0984e3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <circle cx="200" cy="80" r="30" fill="rgba(255,255,255,0.8)"/>
+  <path d="M185 80 L200 65 L215 80 L200 95 Z" fill="rgba(255,255,255,0.6)"/>
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">25°C</text>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="rgba(255,255,255,0.8)">Sunny</text>
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Weather Dashboard</text>
+</svg>

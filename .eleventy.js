@@ -38,6 +38,13 @@ module.exports = function(eleventyConfig) {
     return new Date(value).toISOString();
   });
 
+  // Create blog collection
+  eleventyConfig.addCollection("post", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/*.md").sort(function(a, b) {
+      return b.date - a.date; // Sort by date, newest first
+    });
+  });
+
   return {
     dir: {
       input: "src",

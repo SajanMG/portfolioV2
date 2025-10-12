@@ -1,0 +1,17 @@
+module.exports = [
+    {
+      title: "Rebuilding of Autech Job Application",
+      description: "Contributed to rebuilding a full-stack Autech application with server-side rendering (SSR) and dynamic routing.",
+      role: "Front-End Developer",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Git", "GCP"],
+      websiteUrl: "https://app.autechjobs.com/"
+    },
+    {
+      title: "Development of Xplorers Website in Next.js",
+      description: "Built front-end components and pages using React, Tailwind CSS, and Next.js.",
+      role: "Front-End Developer",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Node.js", "GitHub", "GCP"],
+      websiteUrl: "https://xplorers-website.vercel.app/"
+    }
+  ];
+  
