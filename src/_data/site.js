@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Portfolio",
+  title: "Sajan's Portfolio",
   description: "Full-Stack Developer & Tech Enthusiast",
   url: "https://sajantamu.com",
   author: "Sajan Gurung",
