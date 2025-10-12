@@ -97,6 +97,50 @@ description: Welcome to my portfolio - Developer, Designer, and Tech Enthusiast
     </div>
 </section>
 
+
+<!-- Other Projects -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">Other Projects</h2>
+        <p class="section-description">Here are some of my side projects and personal work.</p>
+        
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            {% if project.liveUrl %}
+                            <a href="{{ project.liveUrl }}" target="_blank" rel="noopener" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            {% endif %}
+                            {% if project.githubUrl %}
+                            <a href="{{ project.githubUrl }}" target="_blank" rel="noopener" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="project-technologies">
+                        {% for tech in project.technologies %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section> 
+
 <!-- Other Contributions -->
 <section class="contributions">
     <div class="container">
@@ -143,48 +187,6 @@ description: Welcome to my portfolio - Developer, Designer, and Tech Enthusiast
     </div>
 </section>
 
-<!-- Other Projects -->
-<section class="projects">
-    <div class="container">
-        <h2 class="section-title">Other Projects</h2>
-        <p class="section-description">Here are some of my side projects and personal work.</p>
-        
-        <div class="projects-grid">
-            {% for project in projects %}
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            {% if project.liveUrl %}
-                            <a href="{{ project.liveUrl }}" target="_blank" rel="noopener" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                <span>Live Demo</span>
-                            </a>
-                            {% endif %}
-                            {% if project.githubUrl %}
-                            <a href="{{ project.githubUrl }}" target="_blank" rel="noopener" class="project-link">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">{{ project.title }}</h3>
-                    <p class="project-description">{{ project.description }}</p>
-                    <div class="project-technologies">
-                        {% for tech in project.technologies %}
-                        <span class="tech-tag">{{ tech }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section> 
 
 <!-- Recent Blog Posts -->
 <section class="recent-posts">
