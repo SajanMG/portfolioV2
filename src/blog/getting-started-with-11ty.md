@@ -5,7 +5,7 @@ description: "Learn how to build fast, modern websites with 11ty static site gen
 date: 2025-10-12
 tags: ["11ty", "static-sites", "web-development"]
 excerpt: "11ty is a powerful static site generator that makes building modern websites simple and fast. In this post, we'll explore the basics of setting up an 11ty project and creating your first static site."
-featureImage: "/images/blog/11ty-feature.jpg"
+featureImage: "/images/blog/getting-started-with-11ty.png"
 featureImageAlt: "11ty static site generator logo and code on a dark background"
 ---
 

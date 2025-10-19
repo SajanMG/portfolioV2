@@ -5,7 +5,7 @@ description: "Explore advanced CSS features and modern layout techniques"
 date: 2025-10-12
 tags: ["css", "frontend", "web-design"]
 excerpt: "CSS has evolved significantly over the years, providing developers with powerful tools for creating beautiful and responsive layouts. Let's dive into some modern CSS techniques that will enhance your web development skills."
-featureImage: "/images/blog/css-feature.jpg"
+featureImage: "/images/blog/modern-css-technique.png"
 featureImageAlt: "Modern CSS code examples and visual effects"
 ---
 

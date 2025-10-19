@@ -5,7 +5,7 @@ description: "Best practices for creating mobile-first, responsive web applicati
 date: 2025-10-12
 tags: ["responsive-design", "mobile-first", "web-development"]
 excerpt: "In today's digital landscape, responsive design is not just a nice-to-have feature—it's essential. Learn the best practices for building web applications that work seamlessly across all devices."
-featureImage: "/images/blog/responsive-feature.jpg"
+featureImage: "/images/blog/building-responsive-web-application.png"
 featureImageAlt: "Responsive web design showing different device layouts"
 ---
 

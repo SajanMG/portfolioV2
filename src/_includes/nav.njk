@@ -1,7 +1,10 @@
 <header class="header">
     <nav class="nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">{{ site.title or 'Portfolio' }}</a>
+            <a href="/" class="nav-logo">
+                <img src="/images/logos/logo.png" alt="{{ site.title or 'Portfolio' }}" class="logo-image" onerror="this.src='/images/logos/logo.png'; this.onerror=null;">
+                <span class="logo-text">{{ site.title or 'Portfolio' }}</span>
+            </a>
             <ul class="nav-menu">
                 <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="/blog" class="nav-link">Blog</a></li>
