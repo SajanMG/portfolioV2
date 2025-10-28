@@ -6,6 +6,8 @@ module.exports = {
   email: "sajantamu04@gmail.com",
   github: "https://github.com/SajanMG",
   linkedin: "https://www.linkedin.com/in/sajangrg/",
+  // Path to homepage profile image used in hero section
+  profileImage: "/images/profile.png",
   skills: {
     frontend: ["HTML5", "CSS3", "Tailwind", "JavaScript", "React", "Vue.js", "TypeScript"],
     backend: ["Node.js", "Express", "PHP", "PostgreSQL", "MySQL", "Symfony"],
