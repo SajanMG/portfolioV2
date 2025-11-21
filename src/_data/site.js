@@ -1,6 +1,6 @@
 module.exports = {
   title: "Sajan's Portfolio",
-  description: "Full-Stack Developer & Tech Enthusiast",
+  description: "Software Engineer & Tech Enthusiast",
   url: "https://sajantamu.com",
   author: "Sajan Gurung",
   email: "sajantamu04@gmail.com",
