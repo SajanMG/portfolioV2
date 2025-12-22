@@ -81,7 +81,7 @@ These aren’t flashy features, but they remove friction.
 
 Originally, comparisons only existed in memory. Refreshing the page or sharing results meant starting over.
 
-At this point, I shared an early version with **<a href="geshan.com.np">Geshan Dai</a>**, who suggested a different approach:  
+At this point, I shared an early version with **<a href="https://geshan.com.np/">Geshan Dai</a>**, who suggested a different approach:  
 **use the URL itself as application state.**
 
 The idea was simple but powerful:
@@ -185,7 +185,7 @@ Small tools become powerful when:
 You don’t need a massive feature set to build something useful.  
 You need clarity, focus, and restraint.
 
-Thanks to **<a href="geshan.com.np">Geshan Dai</a>** for the early feedback around using the URL as state, shareable comparisons, example links, and array-based domain parameters — ideas that fundamentally shaped the direction of the product.
+Thanks to **<a href="https://geshan.com.np/">Geshan Dai</a>** for the early feedback around using the URL as state, shareable comparisons, example links, and array-based domain parameters — ideas that fundamentally shaped the direction of the product.
 
 If you’re building something similar, my advice is simple:
 
