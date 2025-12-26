@@ -1,38 +1,18 @@
 module.exports = [
   {
-    title: "Task Manager App",
-    description: "A full-stack task management application built with React and Node.js. Features include user authentication, real-time updates, and drag-and-drop functionality.",
-    image: "/images/projects/task-manager.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-    liveUrl: "https://taskmanager-demo.com",
-    githubUrl: "https://github.com/yourusername/task-manager",
-    featured: true
-  },
-  {
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard that displays current conditions and forecasts for multiple cities. Built with vanilla JavaScript and modern CSS.",
-    image: "/images/projects/weather-dashboard.jpg",
-    technologies: ["JavaScript", "CSS3", "Weather API"],
-    liveUrl: "https://weather-dashboard-demo.com",
-    githubUrl: "https://github.com/yourusername/weather-dashboard",
-    featured: true
-  },
-  {
-    title: "E-commerce Template",
-    description: "A modern, responsive e-commerce template built with HTML, CSS, and JavaScript. Includes shopping cart functionality and payment integration.",
-    image: "/images/projects/ecommerce-template.jpg",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Stripe API"],
-    liveUrl: "https://ecommerce-template-demo.com",
-    githubUrl: "https://github.com/yourusername/ecommerce-template",
-    featured: false
-  },
-  {
-    title: "Portfolio Website",
-    description: "A clean and modern portfolio website built with 11ty static site generator. Features blog functionality and responsive design.",
-    image: "/images/projects/portfolio-website.jpg",
-    technologies: ["11ty", "Nunjucks", "CSS3", "JavaScript"],
-    liveUrl: "https://yourportfolio.com",
-    githubUrl: "https://github.com/yourusername/portfolio-11ty",
-    featured: true
-  }
+   title: "Domain Ranking Tool",
+  description:
+    "A fast domain ranking app to add multiple domains, track ranking history, compare performance, and easily share rankings — powered by a Vue + Vite frontend and a NestJS backend.",
+  image: "/images/projects/domain-ranking-tool.webp",
+  technologies: [
+    "Vue 3",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL (Neon)",
+    "Tranco API"
+  ],
+  liveUrl: "https://domainrank.sajantamu.com/",
+  githubUrl: "https://github.com/SajanMG/domain-ranking-app-frontend",
+  featured: true
+}
 ];
