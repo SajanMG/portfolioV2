@@ -282,7 +282,7 @@ a {
     padding: 5rem 0;
 }
 
-.about:nth-child(even), .skills:nth-child(even), .contributions:nth-child(even), .contact:nth-child(even) {
+.about:nth-child(even), .skills:nth-child(even), .projects:nth-child(even), .recent-posts:nth-child(even) {
     background-color: var(--bg-secondary);
 }
 
